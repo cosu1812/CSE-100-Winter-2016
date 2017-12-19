@@ -1,0 +1,25 @@
+Name: Connie Su
+
+a) Why do we use in-order traversal to print the BST nodes; while use post-order
+traversal to delete all BST nodes?
+  
+ We use in-order traversal to print the BST nodes to have the data in the nodes
+ in a sorted order. We use post-order to delete all BST nodes because if we 
+ delete by in-order traversal, we will have some undeleted nodes when we delete
+ nodes that points to them. Also, we will get segmentation fault.
+
+b) Read the source code in BSTNode.hpp and BSTIterator.hpp. Then try to 
+  understand how to use operator overloading in C++, which is a feature that Java
+  does not support. Pick an example from the provided source code and state which
+  operator is overloaded, what is the expression of this operator (i.e '+' has 
+  expression 'a+b') and give an example of using this overloaded operator.
+    
+  Example: bool operator==(BSTIterator<Data> const & other) const
+        
+  The '==' operator is overloaded. '==' has 'a==b'. 
+	    
+  Example: in main
+  BSTNode c = new BST<Data>(4);
+  BSTNode d = new BST<Data>(8);
+  return c == d;
+  This would return false.
