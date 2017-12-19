@@ -1,0 +1,22 @@
+# Ignore everything
+*
+
+# Except for these:
+!.gitignore
+!Makefile
+!refcompress
+!refuncompress
+!*.hpp
+!*.cpp
+!*.pdf
+!input_files/
+!input_files/binary.dat
+!input_files/checkpoint1.txt
+!input_files/checkpoint2.txt
+!input_files/empty
+!input_files/justA
+!input_files/justABC
+!input_files/lotsofA
+!input_files/pictureofdoriangray.txt
+!input_files/theprince.txt
+!input_files/warandpeace.txt
