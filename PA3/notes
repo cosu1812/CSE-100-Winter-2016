@@ -1,0 +1,55 @@
+ /*    // if priority queue is empty exit loop
+     if (pq.empty()) break;
+
+     // get top element 
+     pair<TrieNode*, unsigned int> get = pq.top();
+     
+     // remove top element
+     pq.pop();
+ 
+     // check if element have word
+     curr = get.first;
+     
+     //get frequency
+     //unsigned int currFreq = curr->getFreq();
+     //if (maxFreq <= freq)
+
+     if (curr->getIsWord()){
+        // insert word with frequency if it is not in list yet
+        //it = std::falreadyIn.begin(), alreadyIn.end(), curr->getText());
+	//if (it == alreadyIn.end()){
+	  // alreadyIn.push_back(curr->getText());
+	//   pair <string, unsigned int> put = {curr->getText(), curr->getFreq()};
+
+	   list.push_back(make_pair(curr->getText(), curr->getFreq()));
+	   std::sort(list.begin(), list.end(), Compare());
+	   //if (listword == 0 || listword > put.second) listword = put.second;
+	   
+//	   numWords++;
+//	}
+     }	
+
+   //    if (list.size() == 10){
+        //auto leastHeavy = list.top();
+//	listword = leastHeavy.second; 
+//	break;
+  //   }
+     
+     // go through top elemenet's children and push them into priority queue
+     for (unsigned int index = 0; index < ALPHABET_SIZE; index++){
+        if (curr->getChild(index)){
+	   TrieNode* child = curr->getChild(index);
+           get = {child, child->getMax()};
+           pq.push(get);
+        }
+     }
+
+     pair<TrieNode*, unsigned int> check = pq.top();
+     TrieNode* next = check.first;
+    
+     if (list.size() >= 10){
+        auto least = list[9];
+	listword = least.second;
+	if (next->getMax() <= listword) break;
+     }*/
+
